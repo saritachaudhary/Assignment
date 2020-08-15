@@ -1,7 +1,7 @@
 # Assignment
 Bootstrap table using JSON data
 
-1. Include bootstrap for styling from booystrapcdn.
+1. Include bootstrap for styling from bootstrapcdn.
 https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
 
 2.Include bootstrap table css for the table.
