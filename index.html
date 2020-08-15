@@ -1,0 +1,354 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+<meta charset="utf-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title> 
+	Display Table
+</title> 
+
+<!-- Include Bootstrap for styling -->
+<link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
+
+<!--ajax lib-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Include the Bootstrap Table CSS 
+for the table -->
+<link rel="stylesheet" href= "https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.css"> 
+</head> 
+<body> 
+    <div class="container"> 
+        <h1 class="text text-success text-center "> 
+            Performance of Reproductive Child Health 
+        </h1> 
+        <h3 class="text text-success text-center"> 
+          April 2018 - September 2018
+        </h3>
+        	<table class="table-striped border-success table-shortable">
+		<thead> 
+		<tr> 
+			<th data-field="Indicators S.No." data-order="desc"> 
+			<span class="text-success"> 
+				Indicators S.No &#9660
+			</span> 
+			</th> 
+			<th data-field="Indicator Group" data-order="desc"> 
+			<span class="text-success"> 
+				Indicator Group &#9660
+			</span> 
+      </th> 
+      <th data-field="Item Code (As per HMIS formats)"> 
+        <span class="text-success"> 
+          Item Code (As per HMIS formats)
+        </span> 
+        </th> 
+        <th data-field="Indicators Item"> 
+          <span class="text-success"> 
+            Indicators Item &#9660
+          </span> 
+          </th> 
+          <th data-field="Need Assessed (2018-19) - Nos. - (A)"> 
+            <span class="text-success"> 
+              Need Assessed (2018-19) - Nos. - (A)
+            </span> 
+            </th> 
+            <th data-field="Need Assessed (2018-19) - Units - (B)"> 
+              <span class="text-success"> 
+                Need Assessed (2018-19) - Units - (B)
+              </span> 
+              </th> 
+              <th data-field="Achievement during April to September - India - (2018-19) - (C)"> 
+                <span class="text-success"> 
+                  Achievement during April to September - India - (2018-19) - (C)
+                </span> 
+                </th> 
+                <th data-field="Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)"> 
+                  <span class="text-success"> 
+                    Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)
+                  </span> 
+                  </th> 
+                  <th data-field="Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)"> 
+                    <span class="text-success"> 
+                      Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)
+                    </span> 
+                    </th> 
+                    <th data-field="Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)"> 
+                      <span class="text-success"> 
+                        Achievement during April to September 
+                        - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)
+                      </span> 
+                      </th> 
+                      <th data-field="% Achievement of need assessed (2018-19) - (G=(D/A)*100)"> 
+                        <span class="text-success"> 
+                          % Achievement of need assessed (2018-19) - (G=(D/A)*100)
+                        </span> 
+                        </th> 
+		              </tr> 
+		       </thead> 
+	   </table> 
+</div> 
+<!--js file-->
+<script src="./src/short.js"></script>
+
+<!-- Include jQuery and other required 
+files for Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"> 
+</script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"> 
+</script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"> 
+</script>
+
+<!--JavaScript file for Bootstrap table -->
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"> 
+</script> 
+  <script type="text/javascript"> 
+	$(document).ready(function () {  
+	$('table').bootstrapTable({ 
+		data: mydata 
+  }); 
+	}); 
+
+	// JSON data //
+	var mydata = [ 
+    {
+      "Indicators S.No.": "A. 1",
+      "Indicator Group": "A. Immunisation",
+      "Item Code (As per HMIS formats)": "9.1.2",
+      "Indicators Item": "Bacillus Calmette Guerin (BCG)",
+      "Need Assessed (2018-19) - Nos. - (A)": "5606880",
+      "Need Assessed (2018-19) - Units - (B)":  "Children upto 1 year of age",
+      "Achievement during April to September - India - (2018-19) - (C)": "1,13,48,401",
+      "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)": "22,91,534",
+      "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)": "22,28,974",
+      "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)": "2.8",
+      "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "40.9"
+    },
+     {
+      "Indicators S.No.": "A. 2",
+   "Indicator Group": "A. Immunisation",
+   "Item Code (As per HMIS formats)": "9.1.5,9.1.8",
+   "Indicators Item": "Penta 3 + DPT 3",
+   "Need Assessed (2018-19) - Nos. - (A)":  "5606880",
+   "Need Assessed (2018-19) - Units - (B)": "Children upto 1 year of age",
+   "Achievement during April to September - India - (2018-19) - (C)": "1,11,90,576",
+   "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)": "21,47,871",
+   "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)":  "21,00,773",
+   "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)": "2.2",
+   "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "38.3"
+    },
+    {
+   "Indicators S.No.": "A. 3",
+   "Indicator Group": "A. Immunisation",
+   "Item Code (As per HMIS formats)": "9.5.2",
+   "Indicators Item": "DT (2nd Dose)or DPT 5",
+   "Need Assessed (2018-19) - Nos. - (A)": "5083000",
+   "Need Assessed (2018-19) - Units - (B)": "Children 5 years of age",
+   "Achievement during April to September - India - (2018-19) - (C)": "79,73,248",
+   "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)": "11,82,433",
+   "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)": "11,82,433",
+   "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)": "0",
+   "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "23.3"
+    },
+    {
+      "Indicators S.No.": "A. 4",
+   "Indicator Group": "A. Immunisation",
+   "Item Code (As per HMIS formats)": "9.2.1,9.2.2",
+   "Indicators Item": "Measles + MR",
+   "Need Assessed (2018-19) - Nos. - (A)":   "5606880",
+   "Need Assessed (2018-19) - Units - (B)":    "Children upto 1 year of age",
+   "Achievement during April to September - India - (2018-19) - (C)":  "1,17,49,270",
+   "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)": "23,86,523",
+   "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)": "22,55,263",
+   "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)": "5.8",
+   "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "42.6"
+    },
+    {
+      "Indicators S.No.": "A. 5",
+   "Indicator Group": "A. Immunisation",
+   "Item Code (As per HMIS formats)": "9.1.12",
+   "Indicators Item": "Polio (OPV3)",
+   "Need Assessed (2018-19) - Nos. - (A)": "5606880",
+   "Need Assessed (2018-19) - Units - (B)": "Children upto 1 year of age",
+   "Achievement during April to September - India - (2018-19) - (C)": "1,10,04,517",
+   "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)":  "20,92,720",
+   "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)":  "20,67,892",
+   "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":  "1.2",
+   "% Achievement of need assessed (2018-19) - (G=(D/A)*100)":  "37.3"
+    },
+    {
+      "Indicators S.No.": "A. 6",
+   "Indicator Group": "A. Immunisation",
+   "Item Code (As per HMIS formats)": "9.5.3",
+   "Indicators Item":  "Tetanus Toxoid (TT10)",
+   "Need Assessed (2018-19) - Nos. - (A)": "4913000",
+   "Need Assessed (2018-19) - Units - (B)": "Children aged less than 10 years of age",
+   "Achievement during April to September - India - (2018-19) - (C)":"70,78,451", 
+   "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)": "10,43,216",
+   "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)": "11,06,682",
+   "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":  "-5.7",
+   "% Achievement of need assessed (2018-19) - (G=(D/A)*100)":   "21.2"
+    },
+    {
+      "Indicators S.No.": "A. 7",
+   "Indicator Group": "A. Immunisation",
+   "Item Code (As per HMIS formats)": "9.5.4",
+   "Indicators Item": "Tetanus Toxid (TT16)",
+   "Need Assessed (2018-19) - Nos. - (A)": "5861000",
+   "Need Assessed (2018-19) - Units - (B)":  "Children aged less than 16 years of age",
+   "Achievement during April to September - India - (2018-19) - (C)": "68,74,471",
+   "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)": "11,05,318",
+   "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)": "11,99,432",
+   "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":  "-7.8",
+   "% Achievement of need assessed (2018-19) - (G=(D/A)*100)":  "18.9"
+    },
+    {
+      "Indicators S.No.": "A. 8",
+   "Indicator Group": "A. Immunisation",
+   "Item Code (As per HMIS formats)": "9.8.1",
+   "Indicators Item": "Vitamin A (1st Dose)",
+   "Need Assessed (2018-19) - Nos. - (A)": "5606880",
+   "Need Assessed (2018-19) - Units - (B)":  "Children upto 1 year of age",
+   "Achievement during April to September - India - (2018-19) - (C)": "97,00,958",
+   "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)":  "20,67,673",
+   "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)": "21,45,680",
+   "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)": "-3.6",
+   "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "36.9"
+    },
+    {
+      "Indicators S.No.": "A. 9",
+   "Indicator Group": "A. Immunisation",
+   "Item Code (As per HMIS formats)": "9.8.2",
+   "Indicators Item": "Vitamin A (5th Dose)",
+   "Need Assessed (2018-19) - Nos. - (A)": "4735000",
+   "Need Assessed (2018-19) - Units - (B)":   "Children 3 year of age",
+   "Achievement during April to September - India - (2018-19) - (C)":  "78,18,285",
+   "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)": "5,38,855",
+   "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)": "18,14,770",
+   "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":   "-70.3",
+   "% Achievement of need assessed (2018-19) - (G=(D/A)*100)":     "-70.3",
+    },
+    {
+      "Indicators S.No.": "A. 10",
+   "Indicator Group": "A. Immunisation",
+   "Item Code (As per HMIS formats)": "9.8.3",
+   "Indicators Item": "Vitamin A (9th Dose)",
+   "Need Assessed (2018-19) - Nos. - (A)": "5083000",
+   "Need Assessed (2018-19) - Units - (B)":   "Children 5 years of age",
+   "Achievement during April to September - India - (2018-19) - (C)": "74,61,595",
+   "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)": "3,73,648",
+   "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)":  "18,47,448",
+   "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":   "-79.8",
+   "% Achievement of need assessed (2018-19) - (G=(D/A)*100)":   "7.4"
+    },
+    {
+      "Indicator Group":"B. Maternal and Child Health",
+    "Indicators S.No.":  "B. 1",
+    "Item Code (As per HMIS formats)":"1.1",
+    "Indicators Item": "ANC",
+    "Need Assessed (2018-19) - Nos. - (A)": "6729430",
+    "Need Assessed (2018-19) - Units - (B)":"Pregnant women",
+    "Achievement during April to September - India - (2018-19) - (C)": "2,48,56,390",
+    "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)":"46,34,856",
+    "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)":"41,60,020",
+    "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":"11.4",
+    "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "68.9"
+    },
+    {
+    "Indicator Group":"B. Maternal and Child Health",
+    "Indicators S.No.": "B. 2",
+    "Item Code (As per HMIS formats)":"2.1.1.a,2.1.1.b",
+    "Indicators Item": "Maternal Health - Home Deliveries",
+    "Need Assessed (2018-19) - Nos. - (A)": "NA",
+    "Need Assessed (2018-19) - Units - (B)":"NA",
+    "Achievement during April to September - India - (2018-19) - (C)": "6,97,108",
+    "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)":"2,80,371",
+    "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)":"2,99,043",
+    "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "NA"
+  },
+  {
+    "Indicator Group":"B. Maternal and Child Health",
+    "Indicators S.No.":  "B. 3",
+    "Item Code (As per HMIS formats)":"2.2",
+    "Indicators Item": "Maternal Health - Institutional Deliveries",
+    "Need Assessed (2018-19) - Nos. - (A)": "5846590",
+    "Need Assessed (2018-19) - Units - (B)":"Total Births",
+    "Achievement during April to September - India - (2018-19) - (C)": "95,30,646",
+    "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)":"15,49,307",
+    "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)":"14,22,974",
+    "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":"8.9",
+    "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "26.5"
+  },
+  {
+    "Indicator Group":"C. Family Planning",
+    "Indicators S.No.": "C. 1",
+    "Item Code (As per HMIS formats)":"8.13",
+    "Indicators Item": "Condom-User *",
+    "Need Assessed (2018-19) - Nos. - (A)": "31892000",
+    "Need Assessed (2018-19) - Units - (B)":"Unsterilised Eligible Couples",
+    "Achievement during April to September - India - (2018-19) - (C)":  "45,77,644",
+    "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)":"5,21,530",
+    "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)":"4,89,488",
+    "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":"6.5",
+    "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "1.6"
+  },
+{
+    "Indicator Group": "C. Family Planning",
+    "Indicators S.No.": "C. 2",
+    "Item Code (As per HMIS formats)":"8.12,8.14",
+    "Indicators Item": "Oral Pill Users *",
+    "Need Assessed (2018-19) - Nos. - (A)": "31892000",
+    "Need Assessed (2018-19) - Units - (B)":"Unsterilised Eligible Couples",
+    "Achievement during April to September - India - (2018-19) - (C)": "32,02,832",
+    "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)" :"2,86,903",
+    "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)":"2,61,879",
+    "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":"9.6",
+    "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "0.9"
+},
+  {
+    "Indicator Group":"C. Family Planning",
+    "Indicators S.No.": "C. 3",
+    "Item Code (As per HMIS formats)":"8.3,8.4,8.5",
+    "Indicators Item": "IUD Insertions",
+    "Need Assessed (2018-19) - Nos. - (A)": "31892000",
+    "Need Assessed (2018-19) - Units - (B)":"Unsterilised Eligible Couples",
+    "Achievement during April to September - India - (2018-19) - (C)": "29,43,521",
+    "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)":"4,41,308",
+    "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)": "5,16,816",
+    "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":"-14.6",
+    "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "1.4"
+  
+    },
+  {
+    "Indicator Group":"C. Family Planning",
+    "Indicators S.No.":  "C. 4",
+    "Item Code (As per HMIS formats)":"8.2.1,8.2.2,8.2.3,8.2.4,8.1.1",
+    "Indicators Item": "Sterilisation",
+    "Need Assessed (2018-19) - Nos. - (A)": "38601000",
+    "Need Assessed (2018-19) - Units - (B)":"Total Eligible Couples",
+    "Achievement during April to September - India - (2018-19) - (C)": "12,88,517",
+    "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)":"51,471",
+    "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)": "51,569",
+    "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":"-0.2",
+    "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "0.1"
+  },
+  {
+    "Indicator Group":"C. Family Planning",
+    "Indicators S.No.": "C. 5",
+    "Item Code (As per HMIS formats)": "8.2.1,8.2.2,8.2.3,8.2.4",
+    "Indicators Item": "Tubectomy",
+    "Need Assessed (2018-19) - Nos. - (A)": "38601000",
+    "Need Assessed (2018-19) - Units - (B)": "Total Eligible Couples",
+    "Achievement during April to September - India - (2018-19) - (C)": "12,69,723",
+    "Achievement during April to September - State: Uttar Pradesh - (2018-19) - (D)": "49,475",
+    "Achievement during April to September - State: Uttar Pradesh - (2017-18) - (E)":"49,262",
+    "Achievement during April to September - State: Uttar Pradesh - % Change - (F=((D-E)/E)*100)":"0.4",
+    "% Achievement of need assessed (2018-19) - (G=(D/A)*100)": "0.1"
+  },
+	]
+</script> 
+</body> 
+</html>
